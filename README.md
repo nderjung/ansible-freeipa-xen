@@ -1,4 +1,4 @@
-# FreeIPA in Kubernetes on CoreOS on DigitalOcean with Ansible
+# FreeIPA in Kubernetes on CoreOS on XenServer with Ansible
 
 This project uses Ansible to automate bootstrapping a Kubernetes
 cluster around FreeIPA infrastructure on DigitalOcean cloud instances
@@ -257,22 +257,20 @@ Documentation used during development:
 [ansible-module-facts]:  http://docs.ansible.com/ansible/dev_guide/developing_modules_general.html#module-provided-facts
 [yaml-parser]: http://yaml-online-parser.appspot.com/
 
-### [DigitalOcean][digitalocean]
+### [XenServer][xenserver]
 
-First step is to provision DigitalOcean droplets with CoreOS image.
+First step is to provision XenServer VMs with CoreOS image.
 
-- [DigitalOcean API][do-api]
-- [Python DigitalOcean API][py-do]
+- [XenServer API (XAPI)][xapi]
 - And Ansible:
-  - [DigitalOcean API with Ansible][DO-ansible]
+  - [XenServer API with Ansible][xenserver-ansible]
 - And CoreOS:
-  - [Running CoreOS on DigitalOcean tutorial][coreos-do]
+  - [CoreOS on Xenserver tutorial][xenserver-coreos]
 
-[digitalocean]: https://cloud.digitalocean.com/
-[do-api]: https://developers.digitalocean.com/documentation/v2/
-[py-do]: https://github.com/koalalorenzo/python-digitalocean
-[DO-ansible]: https://www.digitalocean.com/community/tutorials/how-to-use-the-digitalocean-api-v2-with-ansible-2-0-on-ubuntu-16-04
-[coreos-do]: https://www.digitalocean.com/community/tutorials/how-to-set-up-a-coreos-cluster-on-digitalocean
+[xenserver]: https://xenproject.org
+[xapi]: https://github.com/xapi-project/xen-api/tree/master/scripts/examples/python
+[xenserver-ansible]: https://docs.ansible.com/ansible/latest/modules/xenserver_guest_module.html
+[xenserver-coreos]: http://richsitblog.com/index.php/2016/08/14/coreos-on-citrix-xenserver-7-setup-guide/
 
 ### Clustering
 
